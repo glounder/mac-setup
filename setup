@@ -64,26 +64,6 @@ fish() {
     mkdir ~/bin
 }
 
-codeExtensions() {
-    echo Installing VS Code Extensions
-    code --install-extension DavidAnson.vscode-markdownlint
-    code --install-extension lukehoban.Go
-    code --install-extension PeterJausovec.vscode-docker
-    code --install-extension donjayamanne.python
-    code --install-extension streetsidesoftware.code-spell-checker
-    code --install-extension octref.vetur
-    code --install-extension mathiasfrohlich.Kotlin
-    code --install-extension jebbs.plantuml
-}
-
-typr() {
-    echo Installing Typr
-    if [ ! -d ~/Applications/Typr.app ]; then
-        mkdir ~/Applications
-        (cd ~/Applications && wget https://github.com/chrisdail/typr/releases/download/v0.1/Typr.zip && unzip Typr.zip && rm Typr.zip)
-    fi
-}
-
 osxDefaults() {
     echo Mac OS Defaults
 
@@ -111,7 +91,4 @@ updateBrew
 brewBundle
 iTermConfig
 fish
-codeExtensions
 osxDefaults
-# Note: If you clone my repo, you probably want to comment this out
-typr
